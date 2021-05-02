@@ -7,23 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="welcome">
+
+    <h1>Welcome to login test</h1>
+    <p>the database has only one user. <br> <b>username:</b> testuser<br> 
+<b>password:</b> testpass </p>
+    </div>
 <div id="frm">
 
 <form action="process.php" method="POST">
-    <p>
-        <label >User name</label>
-        <input type="text" id="user" name="user"/>
-    </p>
-
-    <p>
+    
+    <table class="frm-table">
+    <tr>
+        <td> 
+            <label >User name</label>
+        </td>
+        <td> 
+            <input type="text" id="user" name="user" class="text-box"/>
+        </td>
+        
+</tr><tr>
+        <td>
         <label >Password</label>
-        <input type="password" id="pass" name="password"/>
-    </p>
+        </td>
+        <td> 
+        <input type="password" id="pass" name="password" class="text-box"/>
+    
 
-    <p>
+        </td>
+    </tr>
+    
+
+    </table>
+       
+
+
         <input type="submit" id="btn" value="login"/>
-    </p>
+    
 
 </form>
 </div>
