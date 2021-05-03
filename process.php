@@ -24,7 +24,7 @@ $result=mysqli_query($mysql,"select * From user where name ='$username' ") or di
 
 $row = mysqli_fetch_array($result);
 
-if($row['name'] == $username && $row['password']==$password)
+if($row!= null && $row['name'] == $username && $row['password']==$password)
 {
     print("Login Success!, Welcome $username");
 }else
