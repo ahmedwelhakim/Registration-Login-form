@@ -4,7 +4,7 @@
 $username= $_POST['user'];
 $password = $_POST['password'];
 
-$password = sha1($password);
+
 
 
 //connect the server to the database
@@ -24,7 +24,8 @@ $result=mysqli_query($mysql,"select * From user where name ='$username' ") or di
 
 $row = mysqli_fetch_array($result);
 
-if($row!= null && $row['name'] == $username && $row['password']==$password)
+
+if($row!= null && $row['name'] == $username && crypt($password, $row['password']) == $row['password'])
 {
     print("Login Success!, Welcome $username");
 }else

@@ -11,14 +11,14 @@
 <body>
     <div class="welcome">
 
-        <h1>Welcome to login test</h1>
-        <p>the database has only one user. <br> <b>username:</b> testuser<br>
-            <b>password:</b> testpass
+        <h1>Registration form</h1>
+        <p> Please fill all informations below. 
+        
         </p>
     </div>
     <div id="frm">
 
-        <form action="process.php" method="POST">
+        <form action="reg_process.php" method="POST">
 
             <table class="frm-table">
                 <tr>
@@ -26,7 +26,7 @@
                         <label>User name</label>
                     </td>
                     <td>
-                        <input type="text" id="user" name="user" class="text-box" />
+                        <input type="text" id="user" name="user" class="text-box" required />
                     </td>
 
                 </tr>
@@ -35,7 +35,7 @@
                         <label>Password</label>
                     </td>
                     <td>
-                        <input type="password" id="pass" name="password" class="text-box" />
+                        <input type="password" id="pass" name="password" class="text-box" required />
 
 
                     </td>
@@ -46,7 +46,7 @@
 
 
 
-            <input type="submit" id="btn" value="login" />
+            <input type="submit" id="btn" value="sign up" />
 
 
         </form>
