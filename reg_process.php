@@ -25,8 +25,7 @@ $username=mysqli_real_escape_string($conn,$username);
 $password=mysqli_real_escape_string($conn,$password);
 
 //db sql
-$sql = "INSERT INTO user (name, password) VALUES ('$username','$password' )";
-
+$sql = "INSERT INTO user (username, password) VALUES ('$username','$password' )";
 if( mysqli_query($conn,$sql))
 {
     echo"<p>Successfully registerd!</p>";
@@ -35,7 +34,6 @@ if( mysqli_query($conn,$sql))
 }
 else{
     echo"<p> Registeration Failed!</p> <br>";
-
 }
 
 ?>

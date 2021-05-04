@@ -11,47 +11,39 @@
 <body>
     <div class="welcome">
 
-        <h1>Welcome to login test</h1>
-        <p>the database has only one user. <br> <b>username:</b> testuser<br>
-            <b>password:</b> testpass
-        </p>
+        <h1>Log in Form</h1>
+        <hr>
+        
     </div>
     <div id="frm">
 
-        <form action="process.php" method="POST">
-
+  
             <table class="frm-table">
                 <tr>
                     <td>
                         <label>User name</label>
                     </td>
                     <td>
-                        <input type="text" id="user" name="user" class="text-box" />
+                        <input type="text" id="user" name="user" class="text-box" required />
                     </td>
-
                 </tr>
                 <tr>
                     <td>
                         <label>Password</label>
                     </td>
                     <td>
-                        <input type="password" id="pass" name="password" class="text-box" />
-
-
+                        <input type="password" id="pass" name="password" class="text-box" required />
                     </td>
                 </tr>
-
-
             </table>
-
-
-
-            <input type="submit" id="btn" value="login" />
-
-
-        </form>
+            <input type="submit" onclick="ajax_post()" id="btn" value="login" />
+      
     </div>
 
+    <div id="status">
+    
+    </div>
+<script src="loginScript.js"></script>
 </body>
 
 </html>

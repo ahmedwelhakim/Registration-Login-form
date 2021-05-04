@@ -12,6 +12,7 @@
     <div class="welcome">
 
         <h1>Registration form</h1>
+        <hr>
         <p> Please fill all informations below. 
         
         </p>
