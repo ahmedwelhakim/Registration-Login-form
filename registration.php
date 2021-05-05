@@ -19,7 +19,7 @@
     </div>
     <div id="frm">
 
-        <form action="reg_process.php" method="POST">
+        <form method="post" action="javascript:void(0)">
 
             <table class="frm-table">
                 <tr>
@@ -47,12 +47,13 @@
 
 
 
-            <input type="submit" id="btn" value="sign up" />
+            <input type="submit" id="btn" value="sign up" onclick="ajax_post()" />
 
 
         </form>
+        <div id="status"></div>
     </div>
-
+    <script src="regScript.js"></script>
 </body>
 
 </html>

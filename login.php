@@ -17,7 +17,7 @@
     </div>
     <div id="frm">
 
-  
+        <form method="post" action="javascript:void(0)" > 
             <table class="frm-table">
                 <tr>
                     <td>
@@ -37,13 +37,15 @@
                 </tr>
             </table>
             <input type="submit" onclick="ajax_post()" id="btn" value="login" />
-      
+        </form>
     </div>
 
     <div id="status">
     
     </div>
 <script src="loginScript.js"></script>
+
+
 </body>
 
 </html>

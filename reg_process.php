@@ -1,7 +1,7 @@
 <?php
-
+if(isset($_POST['username'])){
 //Getting the data from the form  
-$username= $_POST['user'];
+$username= $_POST['username'];
 
 
 $blowfish_salt = bin2hex(openssl_random_pseudo_bytes(22));
@@ -28,12 +28,11 @@ $password=mysqli_real_escape_string($conn,$password);
 $sql = "INSERT INTO user (username, password) VALUES ('$username','$password' )";
 if( mysqli_query($conn,$sql))
 {
-    echo"<p>Successfully registerd!</p>";
-    header("Location: login.php");
-    exit();
+    echo"success";
+   
 }
 else{
     echo"<p> Registeration Failed!</p> <br>";
 }
-
+}
 ?>
