@@ -36,3 +36,15 @@ label {
 #status {
     text-align: center;
 }
+
+#guest-list {
+    list-style-type: none;
+}
+
+.guest-btn {
+    margin-top: 4em;
+    width: 7em;
+    height: 3em;
+    font-weight: bold;
+    background-color: antiquewhite;
+}

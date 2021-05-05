@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['username']))
 {
     //Getting the data from the form  
@@ -28,10 +29,12 @@ if(isset($_POST['username']))
 
     if($row!= null && $row['username'] == $username && crypt($password, $row['password']) == $row['password'])
     {
-        echo("<p>Login Success!, Welcome $username </p>");
+        $_SESSION['username']=$username;
+       echo"success";
+       
     }else
     {
-        echo("<p>Login Failed!</p>");
+        echo("<b>Login Failed!</b> <br>please enter correct username and password");
     }
 };
 ?>
