@@ -6,23 +6,20 @@ if(isset($_POST['username']))
     $username= $_POST['username'];
     $password = $_POST['password'];
 
-
-
-
+   
     //connect the server to the database
-    $mysql= mysqli_connect("localhost","root","");
-    mysqli_select_db($mysql,"login"); 
-
+    include("dbConnection.php");
+    
     //Prevent sql injection
     $username=stripcslashes($username);
     $password=stripcslashes($password);
-    $username=mysqli_real_escape_string($mysql,$username);
-    $password=mysqli_real_escape_string($mysql,$password);
+    $username=mysqli_real_escape_string($conn,$username);
+    $password=mysqli_real_escape_string($conn,$password);
 
 
 
     //Query the database
-    $result=mysqli_query($mysql,"select * From user where username ='$username' ") or die("failed to quert db".mysqli_error($mysql));
+    $result=mysqli_query($conn,"select * From user where username ='$username' ") or die("failed to quert db".mysqli_error($conn));
 
     $row = mysqli_fetch_array($result);
 

@@ -10,8 +10,7 @@ $hash = crypt($_POST['password'], "$2a$12$".$blowfish_salt);
 
 
 //connect the server to the database
-$conn = new mysqli("localhost", "root","", "login");
-mysqli_select_db($conn,"login"); 
+ include("dbConnection.php");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
