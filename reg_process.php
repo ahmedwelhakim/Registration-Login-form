@@ -11,10 +11,7 @@ $hash = crypt($_POST['password'], "$2a$12$".$blowfish_salt);
 
 //connect the server to the database
  include("dbConnection.php");
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+
   
 
 //Prevent sql injection
