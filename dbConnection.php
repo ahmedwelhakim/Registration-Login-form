@@ -12,7 +12,7 @@
     }
     //If database doesn't exist
     if (!mysqli_select_db($conn, $database)) {
-      $sql='CREATE DATABASE login';
+      $sql="CREATE DATABASE login";
      
       $res=mysqli_query($conn,$sql);
      
@@ -24,12 +24,12 @@
 
     if($exists == FALSE){
        
-    $sql="CREATE TABLE 'user' (
-      'id' INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      'username' VARCHAR(30) NOT NULL ,
-      'password' VARCHAR(30) NOT NULL,
+    $sql="CREATE TABLE user (
+      id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      username VARCHAR(100) NOT NULL UNIQUE,
+      password VARCHAR(100) NOT NULL
       )";
-    $res=mysqli_query($conn,$sql);
+    $res2=mysqli_query($conn,$sql);
     }
 
     

@@ -32,6 +32,7 @@ if(isset($_POST['username']))
     }else
     {
         echo("<b>Login Failed!</b> <br>please enter correct username and password");
+        echo(crypt($password, $row['password']));echo"<br>"; echo($row['password']) ;
     }
 };
 ?>
