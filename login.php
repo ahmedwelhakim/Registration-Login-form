@@ -9,41 +9,49 @@
 </head>
 
 <body>
-    <div class="welcome">
+    <div class="nav-container">
+        <nav id="nav">
+            <h1>Log in Form</h1>
+        </nav>
 
-        <h1>Log in Form</h1>
-        <hr>
-        
     </div>
-    <div id="frm">
+    <div class="body-container">
+        <div id="frm">
 
-        <form method="post" action="javascript:void(0)" > 
-            <table class="frm-table">
-                <tr>
-                    <td>
-                        <label>User name</label>
-                    </td>
-                    <td>
-                        <input type="text" id="user" name="user" class="text-box" required />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Password</label>
-                    </td>
-                    <td>
-                        <input type="password" id="pass" name="password" class="text-box" required />
-                    </td>
-                </tr>
-            </table>
-            <input type="submit" onclick="ajax_post()" id="btn" value="login" />
-        </form>
-    </div>
+            <form method="post" action="javascript:void(0)">
+                <table class="frm-table">
+                    <tr>
+                        <td>
+                            <label>User name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="user" name="user" class="text-box" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="pass" name="password" class="text-box" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class='btn' type="submit" onclick="ajax_post()" id="btn" value="login" />
+                        </td>
+                    </tr>
+                </table>
 
-    <div id="status">
-    
+            </form>
+        </div>
+
+        <div id="status">
+
+        </div>
     </div>
-<script src="loginScript.js"></script>
+    <script src="loginScript.js"></script>
 
 
 </body>

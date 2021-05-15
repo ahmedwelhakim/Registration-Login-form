@@ -9,51 +9,57 @@
 </head>
 
 <body>
-    <div class="welcome">
+    <div class="nav-container">
 
-        <h1>Registration form</h1>
-        <hr>
-        <p> Please fill all informations below. 
-        
-        </p>
+        <nav id="nav">
+            <h1>Registration form</h1>
+        </nav>
     </div>
-    <div id="frm">
+    <div class="body-container">
+        <div id="frm">
 
-        <form method="post" action="javascript:void(0)">
+            <form method="post" action="javascript:void(0)">
 
-            <table class="frm-table">
-                <tr>
-                    <td>
-                        <label>User name</label>
-                    </td>
-                    <td>
-                        <input type="text" id="user" name="user" class="text-box" required />
-                    </td>
+                <table class="frm-table">
+                    <tr>
+                        <td>
+                            <label>User name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="user" name="user" class="text-box" required />
+                        </td>
 
-                </tr>
-                <tr>
-                    <td>
-                        <label>Password</label>
-                    </td>
-                    <td>
-                        <input type="password" id="pass" name="password" class="text-box" required />
-
-
-                    </td>
-                </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="pass" name="password" class="text-box" required />
 
 
-            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="btn" type="submit" id="btn" value="sign up" onclick="ajax_post()" />
+
+                        </td>
+                    </tr>
+                </table>
 
 
 
-            <input type="submit" id="btn" value="sign up" onclick="ajax_post()" />
 
 
-        </form>
-        <div id="status"></div>
+            </form>
+            <div id="status"></div>
+        </div>
     </div>
     <script src="regScript.js"></script>
+
 </body>
 
 </html>

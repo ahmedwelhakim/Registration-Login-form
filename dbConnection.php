@@ -12,7 +12,7 @@
     }
     //If database doesn't exist
     if (!mysqli_select_db($conn, $database)) {
-      $sql="CREATE DATABASE login";
+      $sql="CREATE DATABASE ". $database;
      
       $res=mysqli_query($conn,$sql);
      
